@@ -1,0 +1,36 @@
+Customers: 
+    FirstName 
+    LastName 
+    Contact Number 
+    Email 
+    Address 
+    
+Vehicles: 
+    CustomerID (Foreign Key referencing Customers)
+    Model
+    Year
+    LicensePlate
+    
+Services: 
+    ServiceName 
+    Description 
+    Cost 
+    
+Technicians: 
+    FirstName 
+    LastName
+    Contact Number 
+    Email   
+    
+Appointments: 
+    CustomerID (Foreign Key referencing Customers) 
+    VehicleID (Foreign Key referencing Vehicles) 
+    TechnicianID (Foreign Key referencing Technicians) 
+    AppointmentDate
+    Notes
+
+Invoice:
+    AppointmentID (Foreign Key referencing Appointments)
+    TotalCost
+    paymentStatus [pending , done]
+    paymentDate
