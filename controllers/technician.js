@@ -37,7 +37,6 @@ exports.technicianSignup = async function (req, res, next) {
     req.body.password = await bcrypt.hash(req.body.password, 8)
     let technicianCreate = await TECHNICIAN.create(req.body)
 
-
     res.status(201).json({
       status: "Success",
       message: "technician Data signup Successfully",
